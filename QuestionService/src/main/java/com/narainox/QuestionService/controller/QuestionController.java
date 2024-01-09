@@ -1,5 +1,6 @@
 package com.narainox.QuestionService.controller;
 
+import com.narainox.QuestionService.models.Question;
 import com.narainox.QuestionService.payloads.ApiResponse;
 import com.narainox.QuestionService.services.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class QuestionController {
     }
 
     @PostMapping("/{questionId}")
-    public ResponseEntity<Question> updateQuestion(@PathVariable Integer questionId,@RequestBody Question question)
+    public ResponseEntity<Question> updateQuestion(@PathVariable Integer questionId, @RequestBody Question question)
     {
         return new ResponseEntity<>(questionService.updateQuestion(questionId,question),HttpStatus.OK);
     }
