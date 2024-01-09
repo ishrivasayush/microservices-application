@@ -1,8 +1,15 @@
 package com.narainox.QuestionService.payloads;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ApiResponse {
-    public ApiResponse(String questionDeletedSuccessfully, boolean b, HttpStatus ok) {
-    }
+    private String message;
+    private Boolean success;
+    private HttpStatus status;
 }
